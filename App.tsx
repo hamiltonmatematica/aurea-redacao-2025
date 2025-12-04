@@ -205,6 +205,7 @@ const WhyChoose = () => {
 const WhatYouGet = () => {
   const features = [
     { title: "Horário", text: "Quintas-feiras de 19h às 21h15", icon: <Calendar /> },
+    { title: "Início do Curso", text: "26 de Fevereiro", icon: <Calendar /> },
     { title: "Carga Horária", text: "3 aulas + monitoria de correção textual semanal", icon: <Layout /> },
     { title: "Materiais", text: "Material gratuito semanal e Ebook temático", icon: <BookOpen /> },
     { title: "Prática", text: "Simulados e Monitorias individuais de correção", icon: <PenTool /> },
@@ -361,8 +362,11 @@ const Pricing = () => {
     <section id="precos" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
         <SectionTitle align="center">Valores e Modalidades</SectionTitle>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16 -mt-4">
+        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-2 -mt-4">
           Invista no seu futuro com o melhor custo-benefício.
+        </p>
+        <p className="text-center text-aurea-blue font-bold text-xl mb-16">
+          Início: 26 de Fevereiro
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
