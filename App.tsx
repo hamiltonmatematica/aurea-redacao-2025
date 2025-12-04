@@ -411,9 +411,13 @@ const Combo = () => {
             <p className="text-xl mb-8 opacity-90 leading-relaxed">
               Para quem quer crescer nas duas áreas que mais impactam a nota do ENEM, o Áurea oferece um combo especial com planejamento integrado e acompanhamento complementar.
             </p>
-            <button className="bg-aurea-ebony text-white px-8 py-4 font-bold uppercase hover:bg-gray-900 transition-colors">
+            <Button
+              href="https://comboaurea2026.netlify.app/"
+              variant="secondary"
+              className="bg-aurea-ebony hover:bg-gray-900"
+            >
               Acessar página do combo
-            </button>
+            </Button>
           </div>
 
           <div className="bg-white/10 p-8 md:p-12 border border-white/20 backdrop-blur-sm">
