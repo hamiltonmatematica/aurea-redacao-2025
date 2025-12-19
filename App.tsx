@@ -122,7 +122,7 @@ const Hero = () => {
         <div className="max-w-4xl">
           <h1 className="font-display text-5xl md:text-8xl uppercase leading-[0.9] mb-6">
             Curso de Redação<br />
-            <span className="text-transparent stroke-white" style={{ WebkitTextStroke: '2px white' }}>Áurea 2025</span>
+            <span className="text-transparent stroke-white" style={{ WebkitTextStroke: '2px white' }}>Áurea 2026</span>
           </h1>
 
           <h2 className="text-xl md:text-3xl font-light mb-8 max-w-3xl text-gray-100">
@@ -242,50 +242,90 @@ const Professors = () => {
       <div className="container mx-auto px-6">
         <SectionTitle>Professores que fazem a diferença</SectionTitle>
 
-        <div className="grid md:grid-cols-2 gap-12 mt-12">
+        <div className="grid md:grid-cols-3 gap-12 mt-12">
           {/* Card Alysson */}
-          <div className="group relative">
-            <div className="bg-aurea-ebony text-white p-8 md:p-12 h-full border-t-4 border-aurea-tangerine hover:bg-aurea-blue transition-colors duration-500">
-              <div className="absolute top-8 right-8 text-white/20 group-hover:text-white/40 transition-colors">
-                <Users size={64} />
-              </div>
-              <h3 className="font-display text-4xl uppercase mb-2">Alysson Luiz</h3>
-              <p className="text-aurea-tangerine font-bold uppercase tracking-widest text-sm mb-6 group-hover:text-white">Professor Titular</p>
+          <div className="group relative bg-white shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+            <div className="aspect-square overflow-hidden">
+              <img
+                src="/alysson.png"
+                alt="Professor Alysson Luiz"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                style={{ objectPosition: 'center 20%' }}
+              />
+            </div>
+            <div className="p-8">
+              <h3 className="font-display text-3xl uppercase mb-2 text-aurea-ebony">Alysson Luiz</h3>
+              <p className="text-aurea-tangerine font-bold uppercase tracking-widest text-sm mb-6">Professor Titular</p>
 
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                  <span className="text-lg opacity-90">Mestre em História pela UFMG</span>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-aurea-blue rounded-full mt-2"></div>
+                  <span className="text-base text-gray-700">Mestre em História pela UFMG</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                  <span className="text-lg opacity-90">Doutor pela USP</span>
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-aurea-blue rounded-full mt-2"></div>
+                  <span className="text-base text-gray-700">Doutor pela USP</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                  <span className="text-lg opacity-90">Especialista em competências do ENEM e repertório sociocultural</span>
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-aurea-blue rounded-full mt-2"></div>
+                  <span className="text-base text-gray-700">Especialista em competências do ENEM e repertório sociocultural</span>
                 </li>
               </ul>
             </div>
           </div>
 
           {/* Card Izabela */}
-          <div className="group relative">
-            <div className="bg-gray-100 text-aurea-ebony p-8 md:p-12 h-full border-t-4 border-aurea-blue hover:bg-aurea-tangerine hover:text-white transition-colors duration-500">
-              <div className="absolute top-8 right-8 text-aurea-ebony/10 group-hover:text-white/20 transition-colors">
-                <Users size={64} />
-              </div>
-              <h3 className="font-display text-4xl uppercase mb-2">Izabela Melo</h3>
-              <p className="text-aurea-blue font-bold uppercase tracking-widest text-sm mb-6 group-hover:text-aurea-ebony">Professora Titular</p>
+          <div className="group relative bg-white shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+            <div className="aspect-square overflow-hidden">
+              <img
+                src="/izabela.png"
+                alt="Professora Izabela Melo"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                style={{ objectPosition: 'center 30%' }}
+              />
+            </div>
+            <div className="p-8">
+              <h3 className="font-display text-3xl uppercase mb-2 text-aurea-ebony">Izabela Melo</h3>
+              <p className="text-aurea-blue font-bold uppercase tracking-widest text-sm mb-6">Professora Titular</p>
 
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-current rounded-full"></div>
-                  <span className="text-lg opacity-90">Pós graduada em Linguística Aplicada</span>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-aurea-blue rounded-full mt-2"></div>
+                  <span className="text-base text-gray-700">Pós graduada em Linguística Aplicada</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 bg-current rounded-full"></div>
-                  <span className="text-lg opacity-90">Experiência em preparação textual para ENEM e vestibulares tradicionais</span>
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-aurea-blue rounded-full mt-2"></div>
+                  <span className="text-base text-gray-700">Experiência em preparação textual para ENEM e vestibulares tradicionais</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Card Clarissa */}
+          <div className="group relative bg-white shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+            <div className="aspect-square overflow-hidden">
+              <img
+                src="/clarissa.png"
+                alt="Professora Clarissa Rodrigues"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-8">
+              <h3 className="font-display text-3xl uppercase mb-2 text-aurea-ebony">Clarissa Rodrigues</h3>
+              <p className="text-aurea-tangerine font-bold uppercase tracking-widest text-sm mb-6">Professora Titular</p>
+
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-aurea-blue rounded-full mt-2"></div>
+                  <span className="text-base text-gray-700">Graduada em História pela Unimontes</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-aurea-blue rounded-full mt-2"></div>
+                  <span className="text-base text-gray-700">Mestre em História Social pela Unimontes</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-aurea-blue rounded-full mt-2"></div>
+                  <span className="text-base text-gray-700">Especialista em competências do ENEM e repertório sociocultural</span>
                 </li>
               </ul>
             </div>
@@ -480,7 +520,7 @@ const Reservation = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-aurea-blue blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
 
           <h2 className="font-display text-4xl md:text-6xl uppercase mb-6 relative z-10">
-            Garanta sua vaga no<br />Curso de Redação 2025
+            Garanta sua vaga no<br />Curso de Redação 2026
           </h2>
           <p className="text-xl text-gray-300 mb-10 relative z-10">
             Quem reservar vaga até trinta e um de dezembro garante descontos especiais.
