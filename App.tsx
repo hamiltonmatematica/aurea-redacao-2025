@@ -389,7 +389,7 @@ const PricingCard = ({
         rel="noopener noreferrer"
         className="w-full py-4 font-bold uppercase tracking-wide bg-aurea-tangerine text-white hover:bg-orange-600 transition-colors text-sm shadow-md hover:shadow-lg text-center"
       >
-        Comprar à vista com 30% de desconto
+        Comprar à vista com 22% de desconto
       </a>
       <a
         href={linkParcelado}
@@ -397,7 +397,7 @@ const PricingCard = ({
         rel="noopener noreferrer"
         className="w-full py-4 font-bold uppercase tracking-wide border-2 border-aurea-blue text-aurea-blue hover:bg-aurea-blue hover:text-white transition-colors text-sm text-center"
       >
-        Comprar parcelado com 30% de desconto
+        Comprar parcelado com 22% de desconto
       </a>
     </div>
   </div>
@@ -405,9 +405,9 @@ const PricingCard = ({
 
 const Pricing = () => {
   const discountData = {
-    title: "Até 31/12",
+    title: "Até 20/01",
     items: [
-      "30% de desconto para alunos novos"
+      "22% de desconto para alunos novos"
     ]
   };
 
@@ -523,7 +523,7 @@ const Reservation = () => {
             Garanta sua vaga no<br />Curso de Redação 2026
           </h2>
           <p className="text-xl text-gray-300 mb-10 relative z-10">
-            Quem reservar vaga até trinta e um de dezembro garante descontos especiais.
+            Quem reservar vaga até vinte de janeiro garante descontos especiais.
           </p>
 
           <Button
