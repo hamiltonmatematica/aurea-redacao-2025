@@ -13,8 +13,10 @@ import {
   MessageCircle,
   PenTool,
   FileText,
-  Users
+  Users,
+  MessageSquare
 } from 'lucide-react';
+import { Popup } from './Popup';
 
 // --- Icons & UI Components ---
 
@@ -341,7 +343,6 @@ const PricingCard = ({
   subtitle,
   price,
   installment,
-  discounts,
   buttonText,
   linkVista,
   linkParcelado
@@ -350,7 +351,6 @@ const PricingCard = ({
   subtitle: string,
   price: string,
   installment: string,
-  discounts: { title: string, items: string[] },
   buttonText: string,
   linkVista: string,
   linkParcelado: string
@@ -370,14 +370,15 @@ const PricingCard = ({
     </div>
 
     <div className="flex-grow border-t border-gray-100 pt-6 mb-8">
-      <p className="font-bold uppercase text-xs tracking-widest mb-3 text-aurea-tangerine">{discounts.title}</p>
       <ul className="space-y-2 text-sm">
-        {discounts.items.map((item, i) => (
-          <li key={i} className="flex items-start gap-2">
-            <span className="mt-1 block w-1 h-1 bg-aurea-blue rounded-full"></span>
-            <span className="text-gray-600">{item}</span>
-          </li>
-        ))}
+        <li className="flex items-start gap-2">
+          <span className="mt-1 block w-1 h-1 bg-aurea-blue rounded-full"></span>
+          <span className="text-gray-600">Material didático incluso</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="mt-1 block w-1 h-1 bg-aurea-blue rounded-full"></span>
+          <span className="text-gray-600">Acesso à plataforma</span>
+        </li>
       </ul>
     </div>
 
@@ -389,7 +390,7 @@ const PricingCard = ({
         rel="noopener noreferrer"
         className="w-full py-4 font-bold uppercase tracking-wide bg-aurea-tangerine text-white hover:bg-orange-600 transition-colors text-sm shadow-md hover:shadow-lg text-center"
       >
-        Comprar à vista com 22% de desconto
+        QUERO À VISTA
       </a>
       <a
         href={linkParcelado}
@@ -397,19 +398,14 @@ const PricingCard = ({
         rel="noopener noreferrer"
         className="w-full py-4 font-bold uppercase tracking-wide border-2 border-aurea-blue text-aurea-blue hover:bg-aurea-blue hover:text-white transition-colors text-sm text-center"
       >
-        Comprar parcelado com 22% de desconto
+        QUERO PARCELADO
       </a>
     </div>
   </div>
 );
 
 const Pricing = () => {
-  const discountData = {
-    title: "Até 20/01",
-    items: [
-      "22% de desconto para alunos novos"
-    ]
-  };
+
 
   return (
     <section id="precos" className="py-24 bg-gray-50">
@@ -428,7 +424,6 @@ const Pricing = () => {
             subtitle="Para estudar o ano inteiro com ritmo constante"
             price="R$ 1.800,00"
             installment="10 x R$ 220,00"
-            discounts={discountData}
             buttonText="Quero o Extensivo"
             linkVista="https://www.asaas.com/c/12hr09ua20q4w0gs"
             linkParcelado="https://www.asaas.com/c/kt5dd9v4ilub8ty5"
@@ -438,7 +433,6 @@ const Pricing = () => {
             subtitle="Para quem precisa acelerar o processo"
             price="R$ 1.100,00"
             installment="10 x R$ 150,00"
-            discounts={discountData}
             buttonText="Quero o Intensivo"
             linkVista="https://www.asaas.com/c/sjcme9p5bxo9gql3"
             linkParcelado="https://www.asaas.com/c/bh4o893r7h9cmp1l"
@@ -448,11 +442,23 @@ const Pricing = () => {
             subtitle="Para estudar com flexibilidade"
             price="R$ 600,00"
             installment="10 x R$ 90,00"
-            discounts={discountData}
             buttonText="Quero o Online"
             linkVista="https://www.asaas.com/c/q7m9wbcghuwdzdlx"
             linkParcelado="https://www.asaas.com/c/yzerxci2q8xlae1j"
           />
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-gray-500 mb-4 text-sm uppercase tracking-wide font-bold">Precisa de condições diferenciadas?</p>
+          <a
+            href="https://wa.me/553899573075?text=Olá!%20Eu%20estava%20na%20página%20do%20Áurea%20e%20gostaria%20de%20fazer%20uma%20negociação"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-aurea-blue hover:text-aurea-tangerine font-bold uppercase tracking-widest border-b-2 border-aurea-blue hover:border-aurea-tangerine transition-all pb-1 group"
+          >
+            <MessageSquare size={20} className="group-hover:scale-110 transition-transform" />
+            <span>Negociações Especiais Clique Aqui</span>
+          </a>
         </div>
       </div>
     </section>
@@ -522,16 +528,12 @@ const Reservation = () => {
           <h2 className="font-display text-4xl md:text-6xl uppercase mb-6 relative z-10">
             Garanta sua vaga no<br />Curso de Redação 2026
           </h2>
-          <p className="text-xl text-gray-300 mb-10 relative z-10">
-            Quem reservar vaga até vinte de janeiro garante descontos especiais.
-          </p>
-
           <Button
             href="https://delicategiantpanda.n8n.cloud/form/71f89cb2-cc61-41b7-a0a8-2459cc14e4ca"
             variant="primary"
             className="text-xl px-12 py-5 relative z-10"
           >
-            Reservar agora com desconto
+            Reservar agora
           </Button>
         </div>
       </div>
@@ -625,6 +627,7 @@ const Footer = () => {
 function App() {
   return (
     <div className="font-sans antialiased text-aurea-ebony bg-white">
+      <Popup />
       <Header />
       <main>
         <Hero />
